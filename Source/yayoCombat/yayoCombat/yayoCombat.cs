@@ -248,23 +248,23 @@ public class yayoCombat : ModBase
             switch (fieldInfo.Name)
             {
                 case "northOffset":
-                    northOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3
-                        ? (Vector3)fieldInfo.GetValue(thingComp)
+                    northOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3 valueNorth
+                        ? valueNorth
                         : Vector3.zero;
                     break;
                 case "southOffset":
-                    southOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3
-                        ? (Vector3)fieldInfo.GetValue(thingComp)
+                    southOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3 valueSouht
+                        ? valueSouht
                         : Vector3.zero;
                     break;
                 case "westOffset":
-                    westOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3
-                        ? (Vector3)fieldInfo.GetValue(thingComp)
+                    westOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3 valueWest
+                        ? valueWest
                         : Vector3.zero;
                     break;
                 case "eastOffset":
-                    eastOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3
-                        ? (Vector3)fieldInfo.GetValue(thingComp)
+                    eastOffsets[weapon] = fieldInfo.GetValue(thingComp) is Vector3 valueEast
+                        ? valueEast
                         : Vector3.zero;
                     break;
             }

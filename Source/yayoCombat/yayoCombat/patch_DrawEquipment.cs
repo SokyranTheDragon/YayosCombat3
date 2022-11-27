@@ -135,14 +135,7 @@ internal class patch_DrawEquipment
             return;
         }
 
-        var methodInfo = typeof(PawnRenderer_DrawEquipmentAiming).GetMethod("SetAnglesAndOffsets",
-            BindingFlags.NonPublic | BindingFlags.Instance);
-        var arguments = new object[]
-        {
-            eq, offHandEquip, aimAngle, pawn, offsetMainHand, offsetOffHand, mainHandAngle,
-            offHandAngle, mainHandAiming, offHandAiming
-        };
-        methodInfo?.Invoke(null, arguments);
-        //PawnRenderer_DrawEquipmentAiming.SetAnglesAndOffsets();
+        PawnRenderer_DrawEquipmentAiming.SetAnglesAndOffsets(
+            eq, offHandEquip, aimAngle, pawn, ref offsetMainHand, ref offsetOffHand, ref mainHandAngle, ref offHandAngle, mainHandAiming, offHandAiming);
     }
 }

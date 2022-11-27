@@ -59,7 +59,7 @@ internal class Patch_PawnGenerator_GenerateGearFor
                 charges = Mathf.RoundToInt(comp.MaxCharges * yayoCombat.s_enemyAmmo * Rand.Range(0.7f, 1.3f));
             }
 
-            Traverse.Create(comp).Field("remainingCharges").SetValue(charges);
+            comp.remainingCharges = charges;
         }
     }
 }

@@ -85,10 +85,7 @@ internal class patch_DamageWorker_AddInjury
             return false;
         }
 
-        var methodInfo = typeof(DamageWorker_AddInjury).GetMethod("ApplySpecialEffectsToPart",
-            BindingFlags.NonPublic | BindingFlags.Instance);
-        methodInfo?.Invoke(__instance, new object[] { pawn, num, dinfo, result });
-        //__instance.ApplySpecialEffectsToPart(pawn, num, dinfo, result);
+        __instance.ApplySpecialEffectsToPart(pawn, num, dinfo, result);
         return false;
     }
 

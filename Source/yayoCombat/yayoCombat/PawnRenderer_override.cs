@@ -74,12 +74,13 @@ public static class PawnRenderer_override
         {
             var weaponLocationsField = AccessTools.TypeByName("ShowMeYourHandsMain").GetField("weaponLocations");
             yayoCombat.weaponLocations = (Dictionary<Thing, Tuple<Vector3, float>>)weaponLocationsField?.GetValue(null);
+            
+            if (yayoCombat.weaponLocations == null)
+            {
+                return;
+            }
         }
 
-        if (yayoCombat.weaponLocations == null)
-        {
-            return;
-        }
 
         yayoCombat.weaponLocations[weapon] = new Tuple<Vector3, float>(drawLoc, aimAngle);
     }
